@@ -1,0 +1,17 @@
+h1. HBase Thrift
+
+Just the thrift interface and its generated Ruby code.  Maybe some more idiomatic Ruby in the future.
+
+h2. Running HBase
+
+Follow the standard instructions for installing and running the HBase server.  As of version 0.20.0, it appears that the Thrift server needs to be started with:
+
+<pre><code>hbase thrift start</code></pre>
+
+and *not* the hbase-daemon.sh script as indicated in multiple places.
+
+h2. Regenerating the code
+
+There's a rake task to generate the ruby files in gen-rb from the lib/Hbase.thrift.  To regenerate, run:
+
+<pre><code>rake thrift:gen</code></pre>
