@@ -3,7 +3,8 @@ $:.unshift File.dirname(__FILE__) + "/../"
 require 'lib/hbase_thrift'
 
 require 'rubygems'
-require 'spec'
+require "bundler"
+Bundler.setup(:test)
 
 HBASE_CONNECTION_PARAMS = ['127.0.0.1', 9090]
 

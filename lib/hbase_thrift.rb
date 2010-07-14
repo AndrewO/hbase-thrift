@@ -1,7 +1,8 @@
 $:.unshift File.dirname(__FILE__) + "/gen-rb/"
 
 require 'rubygems'
-require 'thrift'
+require "bundler"
+Bundler.setup
 
 require 'lib/gen-rb/hbase'
 
