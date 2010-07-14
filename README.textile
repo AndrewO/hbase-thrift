@@ -15,3 +15,7 @@ h2. Regenerating the code
 There's a rake task to generate the ruby files in gen-rb from the lib/Hbase.thrift.  To regenerate, run:
 
 <pre><code>rake thrift:gen</code></pre>
+
+h2. Version?
+
+To keep things simpler, the version of the gem will always match the version of HBase that the Thrift file came from.

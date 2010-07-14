@@ -3,12 +3,11 @@ $:.unshift File.dirname(__FILE__) + "/../"
 require 'lib/hbase_thrift'
 
 require 'rubygems'
-require "bundler"
-Bundler.setup(:test)
+require 'spec'
 
 HBASE_CONNECTION_PARAMS = ['127.0.0.1', 9090]
 
-describe HbaseThrift do
+describe "HbaseThrift" do
   it "connects to a running HBase thrift server" do
     lambda do
       t = Thrift::BufferedTransport.new(Thrift::Socket.new(*HBASE_CONNECTION_PARAMS))

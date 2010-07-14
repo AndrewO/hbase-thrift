@@ -1,11 +1,7 @@
-$:.unshift File.dirname(__FILE__) + "/gen-rb/"
+$:.unshift File.dirname(__FILE__)
+$:.unshift File.expand_path('gen-rb', File.dirname(__FILE__))
 
 require 'rubygems'
-require "bundler"
-Bundler.setup
+require 'thrift'
 
-require 'lib/gen-rb/hbase'
-
-class HbaseThrift
-  
-end
+require File.expand_path('gen-rb/hbase', File.dirname(__FILE__))
